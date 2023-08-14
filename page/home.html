@@ -1,0 +1,1907 @@
+<style type="text/css">
+  .nav-tabs .nav-link.active {
+    background-color: transparent;
+  }
+  .nav-tabs .nav-link {
+    border: none;
+    cursor: pointer;
+  }
+  .banner_right {
+    background-color: #212529;
+  }
+  .banner .banner_right .item span {
+    font-size: 15px;
+  }
+  .banner .banner_right .item h3 {
+    font-size: 64px;
+  }
+
+  .banner .banner_right .item p,
+  .banner .banner_right .item p span {
+    font-size: 53px;
+  }
+  .color_main {
+    color: #c6a47e;
+  }
+
+  .banner_left .phone,
+  .banner_left .email {
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+  }
+
+  .service .main .item:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgb(0, 0, 0) 100%
+    );
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+    height: 477px;
+  }
+  .service .main .item:hover:before {
+    cursor: pointer;
+    content: "INTERIOR DESIGN";
+    font-size: 22px;
+    font-weight: 700;
+    writing-mode: vertical-lr;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.5);
+    animation: main 0.5s;
+    transform-origin: 0 100%;
+  }
+  @keyframes main {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  .about {
+    background-color: #212529;
+  }
+
+  .group_item .item .detail p {
+    font-size: 15px;
+  }
+  .group_item .item .detail h3 {
+    font-size: 24px;
+  }
+
+  .group_item .item {
+    overflow: hidden;
+  }
+  .group_item .item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 0;
+  }
+  .group_item .item:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.5s;
+  }
+  .group_item .item .detail {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateY(100%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 1;
+  }
+  .group_item .item:hover .detail {
+    transform: translateY(30%);
+  }
+
+  .group_item .item .thumbnail img {
+    display: block;
+    transform: scale(1);
+    transition: all 0.5s ease;
+  }
+  .group_item .item:hover .thumbnail img {
+    cursor: pointer;
+    transform: scale(1.5);
+  }
+  .process {
+    background-color: #212529;
+  }
+  .process .main .item:hover .thumbnail .number {
+    animation: spin 10s linear infinite;
+  }
+  @keyframes spin {
+    100% {
+      transform: rotateZ(360deg);
+    }
+  }
+  .border_title {
+    border-color: #c6a47e !important;
+  }
+  .team .main .item .thumbnail .contact {
+    bottom: 20px;
+    font-size: 22px;
+    transform: translateY(104%);
+  }
+  .team .main .item:hover .thumbnail .contact {
+    transform: translateY(0%);
+    transition: 0.5s;
+  }
+  .team .main .item .thumbnail .contact .social a:hover {
+    color: #000 !important;
+    transition: 0.5s;
+  }
+  .statistic .item_right {
+    background-color: #212529;
+  }
+  .statistic .item_right .line {
+    width: 90%;
+    height: 6px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    background-color: #282d32;
+  }
+  .statistic .item_left {
+    background: url(https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_progressbg-1920x550.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    position: relative;
+  }
+  .statistic .item_left:before {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.45);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  .wrapper {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .video-main {
+    position: relative;
+    display: inline-block;
+  }
+
+  .video {
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    border-radius: 100%;
+    background: transparent;
+    color: #fff;
+    display: inline-block;
+    background-color: #fff;
+    z-index: 999;
+  }
+
+  @keyframes waves {
+    0% {
+      transform: scale(0.2, 0.2);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.9;
+    }
+    100% {
+      transform: scale(0.9, 0.9);
+      opacity: 0;
+    }
+  }
+  .waves {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    opacity: 0;
+    border-radius: 100%;
+    right: -50px;
+    bottom: -50px;
+    z-index: -1;
+    animation: waves 3s ease-in-out infinite;
+  }
+
+  .wave-1 {
+    animation-delay: 0s;
+  }
+
+  .wave-2 {
+    animation-delay: 1s;
+  }
+
+  .wave-3 {
+    animation-delay: 2s;
+  }
+
+  .statistic .item_right h4 {
+    font-size: 18px;
+  }
+  .statistic .item_right {
+    padding-right: 400px !important;
+  }
+
+  .slick-dots {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .slick-dots li {
+    padding: 0 10px;
+    opacity: 0.5;
+  }
+  .slick-dots li button {
+    background-position: center !important;
+    background-size: cover !important;
+    text-indent: -9999px;
+    overflow: hidden;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    border: 4px solid #dee2e6;
+  }
+  .slick-dots .slick-active {
+    opacity: 1;
+    position: relative;
+    top: -25px;
+    transition: 0.3s;
+  }
+  .new_recent {
+    background-color: #212529;
+  }
+  .new_recent .main .item .thumbnail .calendar p {
+    font-size: 28px;
+  }
+  .new_recent .main .item .thumbnail .picture {
+    overflow: hidden;
+  }
+  .new_recent .main .item .thumbnail .calendar {
+    width: 65px;
+    height: 65px;
+    right: 20px;
+    bottom: -25px;
+  }
+  .new_recent .main .item .thumbnail:hover img {
+    cursor: pointer;
+    transform: scale(1.2) rotate(3deg);
+    transition: 0.4s;
+  }
+
+  /*Di động*/
+  @media (min-width: 390px) {
+    .p-6 {
+      padding-left: 2vw !important;
+      padding-right: 2vw !important;
+    }
+    .btn_banner {
+      background-color: #c6a47e;
+      color: #fff;
+      border: 0;
+      font-size: 7px;
+      padding: 6px;
+      width: 50%;
+    }
+    .banner .banner_right .item span {
+      font-size: 10px;
+    }
+    .banner .banner_right .item h3 {
+      font-size: 18px;
+    }
+    .banner .banner_right .item p,
+    .banner .banner_right .item p span {
+      font-size: 16px;
+    }
+    .banner .banner_right .item .title {
+      font-size: 9px;
+    }
+    .banner .banner_right .item img {
+      height: 100%;
+      object-fit: cover;
+    }
+    .service .main .item:after {
+      height: 100%;
+    }
+    .service .title p {
+      font-size: 9px;
+    }
+    .service .title h3 {
+      font-size: 18px;
+    }
+    .service .main .item .detail h3 {
+      font-size: 12px;
+    }
+    .service .main .item .detail p {
+      font-size: 6px;
+    }
+    .about_left .image_1 {
+      left: 0px;
+      top: 170px;
+    }
+    .about_left .image_2 {
+      left: 90px;
+    }
+    .about_left .image_1 img {
+      width: 150px;
+    }
+    .about_left .image_2 img {
+      width: 250px;
+    }
+    .about_right p {
+      font-size: 6px;
+    }
+    .about_right h4 {
+      font-size: 20px;
+    }
+    .pdf {
+      font-size: 8px;
+    }
+    .group_item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .group_item .item-2 {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+    }
+    .nav-tabs {
+      font-size: 10px;
+    }
+    .process .main .item .thumbnail .number {
+      background-color: #212529;
+      border-radius: 100%;
+      border: 3px dashed #c6a47e;
+      text-align: center;
+      width: 50%;
+      font-size: 20px;
+      padding: 10px;
+    }
+    .process .main .item .thumbnail {
+      background-color: #282d32;
+      font-size: 9px;
+    }
+
+    .process .main .item .thumbnail h3 {
+      font-size: 12px;
+      font-weight: 800;
+    }
+    .team .main .item .detail h3 {
+      font-size: 15px;
+    }
+    .team .main .item .detail p {
+      font-size: 10px;
+    }
+    .team .main .item .thumbnail .contact {
+      visibility: hidden;
+    }
+    .team .main .item .thumbnail img {
+      height: 240px !important;
+      padding: 20px;
+    }
+    .statistic .item_right {
+      padding-right: 8px !important;
+      text-align: center;
+    }
+    .statistic .item_right h3 {
+      font-size: 30px;
+    }
+    .statistic .item_right p {
+      font-size: 12px;
+    }
+    .percent,
+    .statistic .item_right h4 {
+      font-size: 12px;
+    }
+    .testimonial {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #282d32;
+    }
+    .testimonial-slide {
+      padding: 40px 20px;
+    }
+    .testimonial_box-top {
+      background-color: #1e2226;
+      padding: 15px;
+      border-radius: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      box-shadow: 2px 2px 10px rgba(206, 212, 218, 0.534);
+    }
+    .testimonial_box-text {
+      padding: 10px 0;
+    }
+    .testimonial_box-text p {
+      color: #212529;
+      font-size: 12px;
+      line-height: 20px;
+      margin-bottom: 0;
+    }
+    .testimonial_box-name {
+      padding-top: 10px;
+    }
+    .testimonial_box-name h4 {
+      font-size: 14px;
+      line-height: 25px;
+      margin-bottom: 0;
+    }
+    .testimonial_box-job p {
+      color: #212529;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      line-height: 20px;
+      font-weight: 300;
+      margin-bottom: 0;
+    }
+    .new_recent .main .item .detail {
+      font-size: 10px;
+    }
+  }
+
+  /*Tablet*/
+  @media (min-width: 768px) {
+    .banner .banner_right .item img {
+      height: 420px;
+    }
+    .banner .banner_right .item h3 {
+      font-size: 33px;
+    }
+    .banner .banner_right .item p,
+    .banner .banner_right .item p span {
+      font-size: 26px;
+    }
+    .btn_banner {
+      font-size: 12px;
+      padding: 8px;
+      width: 50%;
+    }
+    .banner .banner_right .item span {
+      font-size: 15px;
+    }
+    .banner .banner_right .item .title {
+      font-size: 11px;
+    }
+    .service .main .down {
+      top: 0px;
+    }
+    .service .title p {
+      font-size: 15px;
+    }
+    .service .title h3 {
+      font-size: 32px;
+    }
+    .service .main .item .detail h3 {
+      font-size: 17px;
+    }
+    .service .main .item .detail p {
+      font-size: 10px;
+    }
+    .about_left .image_1 {
+      left: 15px;
+      top: 375px;
+    }
+    .about_left .image_2 {
+      left: 175px;
+    }
+    .about_left .image_1 img {
+      width: 250px;
+    }
+    .about_left .image_2 img {
+      width: 500px;
+    }
+    .about_right p {
+      font-size: 15px;
+    }
+    .about_right h4 {
+      font-size: 45px;
+    }
+    .pdf {
+      font-size: 16px;
+    }
+    .nav-tabs {
+      font-size: 16px;
+    }
+    .process .main .item .thumbnail .number {
+      width: 35%;
+      font-size: 30px;
+      padding: 20px;
+    }
+    .process .main .item .thumbnail {
+      font-size: 14px;
+    }
+
+    .process .main .item .thumbnail h3 {
+      font-size: 22px;
+    }
+    .team .main .item .detail h3 {
+      font-size: 25px;
+    }
+    .team .main .item .detail p {
+      font-size: 16px;
+    }
+    .team .main .item .thumbnail .contact {
+      visibility: visible;
+    }
+    .team .main .item .thumbnail img {
+      height: 430px !important;
+      padding: 0px;
+    }
+    .statistic .item_right h3 {
+      font-size: 35px;
+    }
+    .statistic .item_right {
+      font-size: 16px;
+    }
+    .percent,
+    .statistic .item_right h4 {
+      font-size: 16px;
+    }
+    .testimonial_box-top {
+      padding: 15px;
+    }
+    .testimonial_box-text p {
+      font-size: 12px;
+    }
+    .testimonial_box-name h4 {
+      font-size: 14px;
+    }
+    .new_recent .main .item .detail {
+      font-size: 12px;
+    }
+  }
+  /*PC*/
+  @media (min-width: 1400px) {
+    .banner .banner_right .item img {
+      height: 840px;
+    }
+    .p-6 {
+      padding-left: 6vw !important;
+      padding-right: 6vw !important;
+    }
+    .banner .banner_right .item h3 {
+      font-size: 64px;
+    }
+    .banner .banner_right .item p,
+    .banner .banner_right .item p span {
+      font-size: 53px;
+    }
+    .banner .banner_right .item .title {
+      font-size: 15px;
+    }
+    .btn_banner {
+      font-size: 16px;
+      padding: 10px;
+      width: 40%;
+    }
+    .banner_left {
+      width: 3%;
+    }
+    .banner_right {
+      width: 97%;
+    }
+    .service .main .down {
+      top: 40px;
+    }
+    .service .main .item:after {
+      height: 477px;
+    }
+    .service .title p {
+      font-size: 15px;
+    }
+    .service .title h3 {
+      font-size: 32px;
+    }
+    .service .main .item .detail h3 {
+      font-size: 22px;
+    }
+    .service .main .item .detail p {
+      font-size: 15px;
+    }
+    .about_left .image_1 {
+      left: 230px;
+      top: 170px;
+    }
+    .about_left .image_1 img {
+      width: 250px;
+    }
+    .about_left .image_2 img {
+      width: 340px;
+    }
+    .about_left .image_2 {
+      left: 231px;
+    }
+    .about_left .image_2:after {
+      content: "";
+      position: absolute;
+      top: 80px;
+      left: -200px;
+      width: 111%;
+      height: 76%;
+      right: 41px;
+      background: rgba(255, 0, 0, 0);
+      border: 10px solid #393f45;
+      z-index: -1;
+    }
+    .group_item {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .group_item .item-2 {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+    }
+    .process .main .item .thumbnail .number {
+      width: 60%;
+      font-size: 32px;
+      padding: 35px;
+    }
+    .team .main .item .thumbnail img {
+      height: 410px !important;
+      padding: 0px;
+    }
+    .statistic .item_right {
+      padding-right: 400px !important;
+      text-align: left;
+    }
+    .statistic .item_right h3 {
+      font-size: 40px;
+    }
+    .percent,
+    .statistic .item_right h4 {
+      font-size: 20px;
+    }
+
+    .testimonial_box-top {
+      padding: 30px;
+    }
+    .testimonial_box-text p {
+      font-size: 14px;
+    }
+    .testimonial_box-name h4 {
+      font-size: 20px;
+    }
+    .new_recent .main .item .detail {
+      font-size: 16px;
+    }
+  }
+</style>
+
+<!-----------------------------------banner----------------------------------->
+<div class="row banner flex-row flex-wrap">
+  <div
+    class="banner_left col-lg-1 d-none d-lg-flex flex-column align-items-center"
+  >
+    <div class="social d-flex flex-column py-5">
+      <a href="" class="mb-2">
+        <i class="bi bi-facebook"></i>
+      </a>
+      <a href="" class="mb-2">
+        <i class="bi bi-instagram"></i>
+      </a>
+      <a href="" class="mb-2">
+        <i class="bi bi-twitter"></i>
+      </a>
+      <a href="" class="mb-2">
+        <i class="bi bi-dribbble"></i>
+      </a>
+      <a href="" class="mb-2">
+        <i class="bi bi-behance"></i>
+      </a>
+    </div>
+    <a href="" class="phone py-5">
+      <i class="bi bi-telephone-fill"></i> +9(898)56412456
+    </a>
+    <a href="" class="email py-5">
+      <i class="bi bi-envelope-fill"></i> emailinland@mail.com
+    </a>
+  </div>
+  <div class="banner_right col-12 col-lg-11 m-0 p-0">
+    <div class="owl-1 owl-carousel owl-theme">
+      <div class="item d-flex flex-row flex-wrap">
+        <div
+          class="col-5 col-lg-4 p-6 py-3 py-md-0 d-flex flex-column justify-content-center text-white"
+        >
+          <span class="title color_main">ARCHITECHTURE DESIGN</span>
+          <h3 class="fw-800">Professional</h3>
+          <p class="fw-400">Interior <span class="color_main">Design</span></p>
+          <span class="my-0 my-md-3">
+            Dolore magna aliqua Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          </span>
+          <button class="btn_banner my-2">VIEW PROJECT</button>
+        </div>
+        <div class="col-7 col-lg-8 p-0">
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_v1_slider02.jpg"
+            class="w-100"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="item d-flex flex-row flex-wrap">
+        <div
+          class="col-5 col-lg-4 p-6 py-3 py-md-0 d-flex flex-column justify-content-center text-white"
+        >
+          <span class="title color_main">ARCHITECHTURE DESIGN</span>
+          <h3 class="fw-800">Contemporary</h3>
+          <p class="fw-400">Interior <span class="color_main">Design</span></p>
+          <span class="my-0 my-md-3">
+            Dolore magna aliqua Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          </span>
+          <button class="btn_banner my-2">VIEW PROJECT</button>
+        </div>
+        <div class="col-7 col-lg-8 p-0">
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_v1_slider01.jpg"
+            class="w-100"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-----------------------------------service----------------------------------->
+<div class="row service p-6 py-5">
+  <div class="title p-6 text-center">
+    <p class="color_main fw-700">TOP SERVICES</p>
+    <h3 class="fw-800">Our Specializations</h3>
+  </div>
+  <div class="p-6 pb-5">
+    <div class="main p-6 pt-4 d-flex flex-row flex-wrap">
+      <div class="item down col-6 col-lg-3 position-relative">
+        <div class="thumbnail">
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/03/01-285x449.jpg"
+            class="w-100"
+            alt=""
+          />
+        </div>
+        <div
+          class="detail text-center text-lg-start w-100 p-1 p-md-3 position-absolute bottom-0"
+          style="z-index: 1"
+        >
+          <h3 class="fw-800">Floor Plan</h3>
+          <p>Contrary to popular belief, Lorem Ipsum is not simply</p>
+        </div>
+      </div>
+      <div class="item col-6 col-lg-3 position-relative">
+        <div class="thumbnail">
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/03/02-285x449.jpg"
+            class="w-100"
+            alt=""
+          />
+        </div>
+        <div
+          class="detail text-center text-lg-start w-100 p-1 p-md-3 position-absolute bottom-0"
+          style="z-index: 1"
+        >
+          <h3 class="fw-800">Interior Design</h3>
+          <p>Contrary to popular belief, Lorem Ipsum is not simply</p>
+        </div>
+      </div>
+      <div class="item down col-6 col-lg-3 position-relative">
+        <div class="thumbnail">
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/03/03-285x449.jpg"
+            class="w-100"
+            alt=""
+          />
+        </div>
+        <div
+          class="detail text-center text-lg-start w-100 p-1 p-md-3 position-absolute bottom-0"
+          style="z-index: 1"
+        >
+          <h3 class="fw-800">Architecture Design</h3>
+          <p>Contrary to popular belief, Lorem Ipsum is not simply</p>
+        </div>
+      </div>
+      <div class="item col-6 col-lg-3 position-relative">
+        <div class="thumbnail">
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/03/04-285x449.jpg"
+            class="w-100"
+            alt=""
+          />
+        </div>
+        <div
+          class="detail text-center text-lg-start w-100 p-1 p-md-3 position-absolute bottom-0"
+          style="z-index: 1"
+        >
+          <h3 class="fw-800">Construction</h3>
+          <p>Contrary to popular belief, Lorem Ipsum is not simply</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-----------------------------------about----------------------------------->
+<div class="row about p-6 py-5">
+  <div class="p-6">
+    <div class="main p-6 d-flex flex-row flex-wrap position-relative">
+      <div class="about_left col-12 col-lg-6 d-flex flex-row flex-wrap">
+        <div
+          class="image_1 col-6 position-absolute bottom-0"
+          style="z-index: 3"
+        >
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_about02.jpg"
+            alt=""
+          />
+        </div>
+        <div class="image_2 col-6 position-relative" style="z-index: 2">
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_about01.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+      <div
+        class="about_right pt-5 pt-lg-0 text-white col-12 col-lg-6"
+        style="z-index: 4"
+      >
+        <p class="title color_main fw-600 m-0 mb-2">ABOUT US</p>
+        <h4 class="fw-800">
+          A Small Efficient <br />
+          <span class="color_main">Interior Designing</span> Team
+        </h4>
+        <p class="detail pe-5">
+          Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+          veniam quis nostruercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Duis aute irure dolor in reprehei voluptate velit
+          esse cillum dolore eu fugiat nulla pariatur Duis aute irure dolor in
+          reprehei voluptate veliet esse cillum dolore eu fugiat nulla
+          pariatur.. <br />
+          Ut enim ad minim veniam quis nostruercitation ullamco laboris nisi ut
+          aliquip ex ea commonsequat Duis aute irure dolor reprehei voluptate
+          esseu fugiat nulla pariatur.
+        </p>
+        <a href="google.com" class="pdf py-3 d-block" style="cursor: pointer">
+          <i
+            class="p-2 p-md-3 bg-secondary text-warning bi bi-file-earmark-pdf"
+          ></i>
+          <span class="p-2 p-md-3 bg-secondary text-warning"
+            >Download Pricing Table</span
+          >
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-----------------------------------project----------------------------------->
+<div class="row project pt-5">
+  <div class="title p-6 text-center">
+    <p class="color_main fw-700">OUR PROJECT</p>
+    <h3 class="fw-800">Our Latest Work</h3>
+  </div>
+  <div class="main p-0">
+    <div class="product d-flex">
+      <nav class="mx-0 px-0 w-100">
+        <div
+          class="nav nav-tabs justify-content-center align-items-center border-0"
+          id="nav-tab"
+          style=""
+          role="tablist"
+        >
+          <a
+            class="nav-link text-white active py-3"
+            id="nav-all"
+            data-bs-toggle="tab"
+            data-bs-target="#all"
+            role="tab"
+            aria-controls="all"
+            aria-selected="true"
+            >All
+          </a>
+          <span class="mx-2">||</span>
+          <a
+            class="nav-link text-white py-3"
+            id="nav-architecture"
+            data-bs-toggle="tab"
+            data-bs-target="#architecture"
+            role="tab"
+            aria-controls="architecture"
+            aria-selected="false"
+            >Architecture
+          </a>
+          <span class="mx-2">||</span>
+          <a
+            class="nav-link text-white py-3"
+            id="nav-construction"
+            data-bs-toggle="tab"
+            data-bs-target="#construction"
+            role="tab"
+            aria-controls="construction"
+            aria-selected="false"
+            >Construction
+          </a>
+          <span class="mx-2">||</span>
+          <a
+            class="nav-link text-white py-3"
+            id="nav-interior"
+            data-bs-toggle="tab"
+            data-bs-target="#interior"
+            role="tab"
+            aria-controls="interior"
+            aria-selected="false"
+            >Interior Design
+          </a>
+        </div>
+      </nav>
+    </div>
+    <div class="col-12">
+      <div class="tab-content w-100" id="nav-tabContent">
+        <div
+          class="list tab-pane fade show active"
+          id="all"
+          role="tabpanel"
+          aria-labelledby="nav-all"
+          tabindex="0"
+        >
+          <div class="group_item">
+            <div class="item item-1 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_project_large1-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-2 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/solar_gallery02.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-3 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_v1_slider02-1-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-4 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/solar_gallery02-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-5 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_project_large5-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-6 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_project_large8-1-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-7 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_project_large7-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="list tab-pane fade"
+          id="architecture"
+          role="tabpanel"
+          aria-labelledby="nav-architecture"
+          tabindex="0"
+        >
+          <div class="group_item">
+            <div class="item item-1 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_project_large1-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-2 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/solar_gallery02.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-3 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_v1_slider02-1-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-5 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_project_large5-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="list tab-pane fade"
+          id="construction"
+          role="tabpanel"
+          aria-labelledby="nav-construction"
+          tabindex="0"
+        >
+          <div class="group_item">
+            <div class="item item-3 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_v1_slider02-1-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-2 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/solar_gallery02.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-5 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_project_large5-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-6 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_project_large8-1-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="list tab-pane fade"
+          id="interior"
+          role="tabpanel"
+          aria-labelledby="nav-interior"
+          tabindex="0"
+        >
+          <div class="group_item">
+            <div class="item item-1 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_project_large1-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-3 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_v1_slider02-1-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-5 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_project_large5-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+            <div class="item item-7 position-relative" role="tabpanel">
+              <div class="thumbnail">
+                <img
+                  src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_project_large7-480x390.jpg"
+                  class="w-100"
+                  alt=""
+                />
+              </div>
+              <div
+                class="detail text-center position-absolute bottom-0 w-100 d-flex flex-column justify-content-center"
+              >
+                <p>AQABA,JORDAN</p>
+                <h3 class="text-white fw-800">Seascape Villa</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-----------------------------------process----------------------------------->
+<div class="row process py-5 p-6">
+  <div class="title p-6 text-center">
+    <p class="color_main fw-700">OUR PROCESS</p>
+    <h3 class="fw-800">See How It Works</h3>
+  </div>
+  <div class="p-6">
+    <div class="main p-6 d-flex flex-row flex-wrap">
+      <div class="item col-6 col-lg-3 mb-3 mb-lg-0 px-2 px-lg-4">
+        <div
+          class="thumbnail p-3 p-lg-4 d-flex flex-column justify-content-center align-items-center text-center p-2"
+        >
+          <div class="number">01</div>
+          <h3 class="pt-4">Concept Design</h3>
+          <div class="border_title border-bottom border-3 w-25 my-3"></div>
+          <p>Duis aute irure dolor in reprehei voluptate velit esse.</p>
+          <a href="" class="text-warning text-decoration-none">READ MORE ></a>
+        </div>
+      </div>
+      <div class="item col-6 col-lg-3 mb-3 mb-lg-0 px-2 px-lg-4">
+        <div
+          class="thumbnail p-3 p-lg-4 d-flex flex-column justify-content-center align-items-center text-center p-2"
+        >
+          <div class="number">02</div>
+          <h3 class="pt-4">Estimation</h3>
+          <div class="border_title border-bottom border-3 w-25 my-3"></div>
+
+          <p>Duis aute irure dolor in reprehei voluptate velit esse.</p>
+          <a href="" class="text-warning text-decoration-none">READ MORE ></a>
+        </div>
+      </div>
+      <div class="item col-6 col-lg-3 mb-3 mb-lg-0 px-2 px-lg-4">
+        <div
+          class="thumbnail p-3 p-lg-4 d-flex flex-column justify-content-center align-items-center text-center p-2"
+        >
+          <div class="number">03</div>
+          <h3 class="pt-4">Implementation</h3>
+          <div class="border_title border-bottom border-3 w-25 my-3"></div>
+
+          <p>Duis aute irure dolor in reprehei voluptate velit esse.</p>
+          <a href="" class="text-warning text-decoration-none">READ MORE ></a>
+        </div>
+      </div>
+      <div class="item col-6 col-lg-3 mb-3 mb-lg-0 px-2 px-lg-4">
+        <div
+          class="thumbnail p-3 p-lg-4 d-flex flex-column justify-content-center align-items-center text-center p-2"
+        >
+          <div class="number">04</div>
+          <h3 class="pt-4">Handover</h3>
+          <div class="border_title border-bottom border-3 w-25 my-3"></div>
+
+          <p>Duis aute irure dolor in reprehei voluptate velit esse.</p>
+          <a href="" class="text-warning text-decoration-none">READ MORE ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-----------------------------------team----------------------------------->
+<div class="row team py-5 p-6">
+  <div class="title p-6 text-center">
+    <p class="color_main fw-700">OUR TEAM</p>
+    <h3 class="fw-800">Our Architects</h3>
+  </div>
+  <div class="main p-6">
+    <div class="owl-2 owl-carousel owl-theme p-6">
+      <div class="item mx-1 mx-md-3 position-relative">
+        <div
+          class="thumbnail position-relative"
+          style="background-color: #f1f1f1"
+        >
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/08/sfddf-208x375.jpg"
+            alt=""
+            style="object-fit: scale-down; height: 430px"
+          />
+          <div
+            class="contact position-absolute bg-warning text-white bottom-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center"
+          >
+            <div class="phone">
+              <p>Contact</p>
+              <span>+4(81) 1800-123-123 </span>
+            </div>
+            <div class="border-bottom border-1 w-50 my-3"></div>
+            <div class="social pb-5">
+              <p>Social Connect</p>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-pinterest"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-dribbble"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-behance"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="detail w-100 p-1 p-md-3 bg-black text-white position-absolute bottom-0 start-0 text-center"
+        >
+          <h3>Rebecca Ruth</h3>
+          <p class="mb-0 mb-md-2">Project Manager</p>
+        </div>
+      </div>
+
+      <div class="item mx-1 mx-md-3 position-relative">
+        <div
+          class="thumbnail position-relative"
+          style="background-color: #f1f1f1"
+        >
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_v1team04.jpg"
+            alt=""
+            style="object-fit: scale-down; height: 430px"
+          />
+          <div
+            class="contact position-absolute bg-warning text-white bottom-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center"
+          >
+            <div class="phone">
+              <p>Contact</p>
+              <span>+4(81) 1800-123-123 </span>
+            </div>
+            <div class="border-bottom border-1 w-50 my-3"></div>
+            <div class="social pb-5">
+              <p>Social Connect</p>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-pinterest"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-dribbble"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-behance"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="detail w-100 p-1 p-md-3 bg-black text-white position-absolute bottom-0 start-0 text-center"
+        >
+          <h3>Harry Paul</h3>
+          <p class="mb-0 mb-md-2">Interior Designer</p>
+        </div>
+      </div>
+
+      <div class="item mx-1 mx-md-3 position-relative">
+        <div
+          class="thumbnail position-relative"
+          style="background-color: #f1f1f1"
+        >
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_v1team01.jpg"
+            alt=""
+            style="object-fit: scale-down; height: 430px"
+          />
+          <div
+            class="contact position-absolute bg-warning text-white bottom-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center"
+          >
+            <div class="phone">
+              <p>Contact</p>
+              <span>+4(81) 1800-123-123 </span>
+            </div>
+            <div class="border-bottom border-1 w-50 my-3"></div>
+            <div class="social pb-5">
+              <p>Social Connect</p>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-pinterest"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-dribbble"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-behance"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="detail w-100 p-1 p-md-3 bg-black text-white position-absolute bottom-0 start-0 text-center"
+        >
+          <h3>Austin Daern</h3>
+          <p class="mb-0 mb-md-2">Architects</p>
+        </div>
+      </div>
+
+      <div class="item mx-1 mx-md-3 position-relative">
+        <div
+          class="thumbnail position-relative"
+          style="background-color: #f1f1f1"
+        >
+          <img
+            src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/int_v1team02.jpg"
+            alt=""
+            style="object-fit: scale-down; height: 430px"
+          />
+          <div
+            class="contact position-absolute bg-warning text-white bottom-0 w-100 h-100 d-flex flex-column align-items-center justify-content-center text-center"
+          >
+            <div class="phone">
+              <p>Contact</p>
+              <span>+4(81) 1800-123-123 </span>
+            </div>
+            <div class="border-bottom border-1 w-50 my-3"></div>
+            <div class="social pb-5">
+              <p>Social Connect</p>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-pinterest"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-dribbble"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-behance"></i>
+              </a>
+              <a href="" class="text-decoration-none">
+                <i class="bi bi-instagram"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          class="detail w-100 p-1 p-md-3 bg-black text-white position-absolute bottom-0 start-0 text-center"
+        >
+          <h3>John Marsh</h3>
+          <p class="mb-0 mb-md-2">Assts. Architecture</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-----------------------------------team----------------------------------->
+<div class="row statistic">
+  <div class="item_left d-none d-lg-block col-5">
+    <div class="thumbnail"></div>
+    <div class="wrapper" style="z-index: 2">
+      <div class="video-main">
+        <div class="promo-video">
+          <div class="waves-block">
+            <div class="waves wave-1"></div>
+            <div class="waves wave-2"></div>
+            <div class="waves wave-3"></div>
+          </div>
+        </div>
+        <a
+          href="https://www.youtube.com/watch?v=BqI0Q7e4kbk"
+          class="video video-popup mfp-iframe"
+          data-lity
+          ><i class="fs-3 text-warning bi bi-play-fill"></i
+        ></a>
+      </div>
+    </div>
+  </div>
+  <div class="item_right col-12 col-lg-7 p-2 p-lg-5 py-5">
+    <h3 class="fw-800">
+      <span class="color_main">130+ Projects</span> <br />
+      All Over The World
+    </h3>
+    <p>
+      Tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam quis nostruercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehei voluptate velit esse cillum
+      dolore eu fugiat nulla pariatur.
+    </p>
+    <h4 class="text-start">Architecture</h4>
+    <div
+      class="percent mb-3 d-flex flex-row align-items-center justify-content-center px-2 px-md-4"
+    >
+      <div class="line col-10">
+        <span
+          class="detail d-block"
+          style="width: 64%; height: 5px; background-color: rgb(198, 164, 126)"
+        ></span>
+      </div>
+      <div class="number col-2">64%</div>
+    </div>
+
+    <h4 class="text-start">Construction</h4>
+    <div
+      class="percent mb-3 d-flex flex-row align-items-center justify-content-center px-2 px-md-4"
+    >
+      <div class="line col-10">
+        <span
+          class="detail d-block"
+          style="width: 79%; height: 5px; background-color: rgb(198, 164, 126)"
+        ></span>
+      </div>
+      <div class="number col-2">79%</div>
+    </div>
+
+    <h4 class="text-start">Interior Design</h4>
+    <div
+      class="percent mb-3 d-flex flex-row align-items-center justify-content-center px-2 px-md-4"
+    >
+      <div class="line col-10">
+        <span
+          class="detail d-block"
+          style="width: 88%; height: 5px; background-color: rgb(198, 164, 126)"
+        ></span>
+      </div>
+      <div class="number col-2">88%</div>
+    </div>
+  </div>
+</div>
+
+<!-----------------------------------testimonial----------------------------------->
+<div class="row testimonial m-0 p-6 py-5">
+  <div class="title p-6 text-center mb-3">
+    <p class="color_main fw-700">OUR TESTIMONIAL</p>
+    <h3 class="fw-800 text-white">What Client Says</h3>
+  </div>
+  <div class="main p-6">
+    <div class="testimonial__inner p-6">
+      <div class="testimonial-slider d-flex flex-column-reverse">
+        <div class="testimonial-slide">
+          <div class="testimonial_box">
+            <div class="testimonial_box-inner">
+              <div class="testimonial_box-top">
+                <div class="testimonial_box-text">
+                  <p class="text-white">
+                    Consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Utenim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                  </p>
+                </div>
+                <div class="testimonial_box-name text-white">
+                  <h4 class="fw-700">
+                    John William -
+                    <span class="color_main">Project Manager</span>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial_box">
+            <div class="testimonial_box-inner">
+              <div class="testimonial_box-top">
+                <div class="testimonial_box-text">
+                  <p class="text-white">
+                    Consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Utenim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                  </p>
+                </div>
+                <div class="testimonial_box-name text-white">
+                  <h4 class="fw-700">
+                    Rebecca Ruth - <span class="color_main">Manager</span>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial-slide">
+          <div class="testimonial_box">
+            <div class="testimonial_box-inner">
+              <div class="testimonial_box-top">
+                <div class="testimonial_box-text">
+                  <p class="text-white">
+                    Consectetur adipisicing elit, sed do eiusmod tempor
+                    incididunt ut labore et dolore magna aliqua. Utenim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu
+                    fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
+                  </p>
+                </div>
+                <div class="testimonial_box-name text-white">
+                  <h4 class="fw-700">
+                    Harry Paul - <span class="color_main">Assts. Manager</span>
+                  </h4>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-----------------------------------new_recent----------------------------------->
+<div class="row new_recent p-6 py-5">
+  <div class="title p-6 text-center">
+    <p class="color_main fw-700">OUR BLOG</p>
+    <h3 class="fw-800 text-white">Recent News</h3>
+  </div>
+  <div class="p-6">
+    <div
+      class="main pt-0 pt-md-5 p-6 d-flex flex-row flex-wrap align-items-center justify-content-md-center justify-content-lg-start"
+    >
+      <div class="item col-12 col-md-6 col-lg-4 p-2">
+        <div class="thumbnail position-relative">
+          <div class="picture">
+            <img
+              src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/blog1-525x335.jpg"
+              class="w-100"
+              alt=""
+            />
+          </div>
+          <div
+            class="calendar bg-warning text-white fw-700 position-absolute text-center"
+          >
+            <p class="m-0">23</p>
+            <span>JAN</span>
+          </div>
+        </div>
+        <div class="detail p-1">
+          <p>
+            <a class="text=text-decoration-none text-white me-4" href="">
+              <i class="text-warning bi bi-person"></i> Author
+            </a>
+            <a class="text=text-decoration-none text-white" href="">
+              <i class="text-warning bi bi-chat"></i> 0 Comments
+            </a>
+          </p>
+          <h5>
+            <a href="" class="text-decoration-none fw-700 text-white"
+              >Capturing The Essence Of Monthly Web Development.</a
+            >
+          </h5>
+          <div class="w-50 my-3 border-warning border-3 border-bottom"></div>
+          <p class="text-white">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim
+          </p>
+          <a href="" class="text-decoration-none text-warning">READ MORE ></a>
+        </div>
+      </div>
+
+      <div class="item col-12 col-md-6 col-lg-4 p-2">
+        <div class="thumbnail position-relative">
+          <div class="picture">
+            <img
+              src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/blog3-525x335.jpg"
+              class="w-100"
+              alt=""
+            />
+          </div>
+          <div
+            class="calendar bg-warning text-white fw-700 position-absolute text-center"
+          >
+            <p class="m-0">23</p>
+            <span>JAN</span>
+          </div>
+        </div>
+        <div class="detail p-1">
+          <p>
+            <a class="text=text-decoration-none text-white me-4" href="">
+              <i class="text-warning bi bi-person"></i> Author
+            </a>
+            <a class="text=text-decoration-none text-white" href="">
+              <i class="text-warning bi bi-chat"></i> 0 Comments
+            </a>
+          </p>
+          <h5>
+            <a href="" class="text-decoration-none fw-700 text-white"
+              >Historic Courtyards For Selling A Home In The World.</a
+            >
+          </h5>
+          <div class="w-50 my-3 border-warning border-3 border-bottom"></div>
+          <p class="text-white">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim
+          </p>
+          <a href="" class="text-decoration-none text-warning">READ MORE ></a>
+        </div>
+      </div>
+
+      <div class="item col-12 col-md-6 col-lg-4 p-2">
+        <div class="thumbnail position-relative">
+          <div class="picture">
+            <img
+              src="https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/blog2-525x335.jpg"
+              class="w-100"
+              alt=""
+            />
+          </div>
+          <div
+            class="calendar bg-warning text-white fw-700 position-absolute text-center"
+          >
+            <p class="m-0">23</p>
+            <span>JAN</span>
+          </div>
+        </div>
+        <div class="detail p-1">
+          <p>
+            <a class="text=text-decoration-none text-white me-4" href="">
+              <i class="text-warning bi bi-person"></i> Author
+            </a>
+            <a class="text=text-decoration-none text-white" href="">
+              <i class="text-warning bi bi-chat"></i> 0 Comments
+            </a>
+          </p>
+          <h5>
+            <a href="" class="text-decoration-none fw-700 text-white"
+              >The World’s Tallest Wooden Sky Scraper Estate Ideas To Sell A.</a
+            >
+          </h5>
+          <div class="w-50 my-3 border-warning border-3 border-bottom"></div>
+          <p class="text-white">
+            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim
+          </p>
+          <a href="" class="text-decoration-none text-warning">READ MORE ></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-----------------------------------map----------------------------------->
+<div class="row map p-0">
+  <iframe
+    class="p-0"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d74121.687705894!2d17.615522574145754!3d54.51052209692783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46fde7ab0f19f8a1%3A0x7b353039e9f3ce1d!2sPiskowa%2C%2084-342%20Le%C5%9Bnice%2C%20Ba%20Lan!5e0!3m2!1svi!2s!4v1682837294537!5m2!1svi!2s"
+    width="600"
+    height="450"
+    style="border: 0"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+<!-- Owl-carousel -->
+<script>
+  $(".owl-1").owlCarousel({
+    loop: true,
+    margin: 0,
+    dots: false,
+    nav: false,
+    responsive: {
+      0: {
+        items: 1,
+      },
+    },
+  }),
+    $(".owl-2").owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      dots: false,
+      autoplay: false,
+      responsive: {
+        390: {
+          items: 2,
+        },
+        768: {
+          items: 2,
+        },
+        1200: {
+          items: 4,
+        },
+      },
+    });
+</script>
+<script>
+  $(document).ready(function () {
+    $(".testimonial-slider").slick({
+      loop: true,
+      autoplay: false,
+      autoplaySpeed: 1000,
+      speed: 600,
+      draggable: true,
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
+    });
+    $(".slick-dots li:nth-child(1)").html(
+      '<button style="background: url(https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_test2img-80x80.jpg);"></button>'
+    );
+    $(".slick-dots li:nth-child(2)").html(
+      '<button style="background: url(https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_team2_img1-80x80.jpg);"></button>'
+    );
+    $(".slick-dots li:nth-child(3)").html(
+      '<button style="background: url(https://kamleshyadav.com/wp/inland/wp-content/uploads/2020/01/index2_team2_img3-80x80.jpg);"></button>'
+    );
+  });
+</script>
+

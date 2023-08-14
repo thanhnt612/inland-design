@@ -1,0 +1,233 @@
+<style type="text/css">
+
+    /******************************General******************************/
+    input{
+        outline: none;
+    }
+    .active{
+        color: #c6a47e!important;
+    }
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+    a:hover{
+        color: #c6a47e!important;
+        transition: 0.3s;
+    }
+    
+    .header_center .style_menu li a:after {
+        display: block;
+        content: "";
+        border-bottom: solid 3px #c6a47e; 
+        content: "";
+        transform: scaleX(0); 
+        transition: transform 0.5s;
+    }
+    .header_center .style_menu li a:hover:after{ 
+        transform: scaleX(1); 
+        transform-origin: 0% 50%; 
+    }
+    
+    .dropdown a:hover {
+        color: #ec4f21!important;
+    }
+    .dropdown:hover .dropdown-content{
+        display: block!important;
+    }
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        z-index: 1;
+        background-color: #fff;
+    }
+    .style_menu{
+        list-style-type: square;
+    }
+    .style_menu li::marker { 
+        color: #c6a47e;
+    }
+    .cls-1{
+        fill: #c6a47e;
+    }
+    
+    .offcanvas{
+        background: #282d32;
+    }
+    /******************************Mobile******************************/
+    
+    @media (min-width: 390px){
+        .offcanvas{
+            width: 75%!important;
+        }
+        svg {
+            width: 29%;
+            height: 40px;
+        }
+        .header_left a span {
+            color: #c6a47e;
+            font-size: 13px;
+        }
+        .header_right{
+            font-size: 5px;
+        }
+    }
+    
+    /******************************Ipad******************************/
+    
+    @media (min-width: 768px){
+        .header_right{
+            font-size: 12px;
+        }
+        .offcanvas{
+            width: 50%!important;
+        }
+        svg{
+            width: 15%;
+            height: 42px;
+        }
+        .header_left a  span {
+            font-size: 25px;
+        }
+    }
+    
+    /******************************Desktop******************************/
+    
+    @media (min-width: 1400px){
+        .menu .dropdown-content ul li a{
+            font-size: 14px;
+        }
+        .menu .dropdown-content ul h3 a{
+            font-size: 16px;
+        }
+        .header_right{
+            font-size: 15px;
+        }
+    }
+    </style>
+    <!-----------------------------------Header----------------------------------->
+    <div class="row">
+        <!--------------------Header_Top-------------------->
+        <div class="header p-6 d-flex flex-row flex-wrap align-items-center justify-content-between py-1 py-md-3">
+            <div class="header_left col-6 col-lg-3">
+                <a href="" class="text-white d-flex flex-row align-items-end justify-content-center justify-content-md-start">
+                    <svg class="svg-size mb-0 mb-md-2" data-name="Layer 1"><polygon class="cls-1" points="0 0 0 9.83 27.67 9.83 0 0"></polygon><polygon class="cls-1" points="0 19 0 11.5 32.83 11.5 32.83 15.25 10.5 15.25 10.5 19 0 19"></polygon><rect class="cls-1" y="21.67" width="10.58" height="7.5"></rect><rect class="cls-1" y="31.71" width="10.58" height="7.5"></rect><polygon class="cls-1" points="50 39.21 50 18.21 13 18.21 13 39.21 21.83 39.21 21.83 28.04 41.17 28.04 41.17 39.21 50 39.21"></polygon><rect class="cls-1" x="24.17" y="30.21" width="6.5" height="9"></rect><rect class="cls-1" x="32.83" y="30.21" width="6.5" height="9"></rect></svg>
+                    <span><b class="text-white fw-700">INLAND</b> DESIGN</span>
+                </a>
+            </div>
+            <div class="header_center col-7 d-none d-lg-flex justify-content-end py-3">
+                <ul class="style_menu navbar-nav p-0 d-lg-flex flex-row align-items-center justify-content-end">
+                    <li class="nav-item mx-4">
+                        <a class="nav-link active" href="?p=">HOME</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="?p=">ABOUT US</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="?p=">PORTFOLIO</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="#">SERVICES</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="?p=">PAGE</a>
+                    </li>
+                    <li class="nav-item mx-4">
+                        <a class="nav-link" href="?p=">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header_right col-6 col-lg-2 d-flex flex-row align-items-center justify-content-end">
+                <div class="search px-0 px-md-3">
+                    <a href="">
+                        <i class="bi bi-search"></i>
+                    </a>
+                </div>
+                <div class="cart px-1">
+                    <a class="px-2 px-md-3 border border-top-0 border-bottom-0" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCartDesktop" href="#">
+                        <i class="bi bi-cart"></i>
+                    </a>
+                </div>
+                <div class="account text-white px-0 px-md-2">
+                    <a href="">LOGIN /</a> <a href=""> RESGINTER</a>
+                </div>
+                <button class="d-md-block d-lg-none btn border-0 text-white fs-5 fs-md-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                    <i class="bi bi-list"></i>
+                </button>
+            </div>
+        </div>
+    
+    
+        <!--------------------Cart_Desktop-------------------->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCartDesktop" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header justify-content-between align-items-center">
+                <h3 class="m-0">GIỎ HÀNG</h3>
+                <button class="btn" type="button" data-bs-dismiss="offcanvas">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="offcanvas-body justify-content-center text-center p-0 px-3" >
+                <button class="btn bg-warning text-white">
+                    <i class="bi bi-search"></i>Tiếp tục mua hàng			
+                </button>
+            </div>
+        </div>
+    
+    
+        <!-- Off canvas Tablet --- Mobile -->
+        <div class="d-md-block d-lg-none offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-body justify-content-end p-0 px-3" >
+                <ul class="navbar-nav d-flex py-3">
+                    <li class="nav-item mb-3 ">
+                        <a class="nav-link text-white fw-700 active" href="#">HOME</a>
+                    </li>
+                    <li class="nav-item mb-3  ">
+                        <a class="nav-link text-white fw-700" href="#">ABOUT US</a>
+                    </li>
+                    <li class="nav-item mb-3  ">
+                        <a class="nav-link text-white fw-700" href="#">PORFOLIO</a>
+                    </li>
+                    <li class="nav-item mb-3  ">
+                        <a class="nav-link text-white fw-700" href="#">SERVICES</a>
+                    </li>
+                    <li class="nav-item mb-3  ">
+                        <a class="nav-link text-white fw-700" href="#">BLOG</a>
+                    </li>
+                    <li class="nav-item mb-3 ">
+                        <a class="nav-link text-white fw-700" href="#">PAGE</a>
+                    </li>
+                    <li class="nav-item mb-3">
+                        <a class="nav-link text-white fw-700" href="#">CONTACT US</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    
+    
+    
+    
+        <!--------------------Cart_Mobile-------------------->
+        <div class="d-md-block d-lg-none offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header justify-content-between align-items-center">
+                <h3 class="m-0">GIỎ HÀNG</h3>
+                <button class="btn" type="button" data-bs-dismiss="offcanvas">
+                    <i class="bi bi-x-lg"></i>
+                </button>
+            </div>
+            <div class="offcanvas-body justify-content-center text-center p-0 px-3" >
+                <img src="https://bizweb.dktcdn.net/100/396/362/themes/777022/assets/mobile-shopping.svg?1629467502394"
+                style="width: 200px;height: 200px;" alt="">
+                <button class="btn bg-warning text-white">
+                    <i class="bi bi-search"></i>Tiếp tục mua hàng			
+                </button>
+            </div>
+        </div>
+    </div>
